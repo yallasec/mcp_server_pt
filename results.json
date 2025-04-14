@@ -1,0 +1,6998 @@
+{
+  "target_url": "https://yallasec.com",
+  "scan_date": "2025-04-14T17:49:02.004845",
+  "context_tree": {
+    "https://yallasec.com": {
+      "url": "https://yallasec.com",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/": {
+      "url": "https://yallasec.com/",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/soluzioni/": {
+      "url": "https://yallasec.com/soluzioni/",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/check-up-gratuito/": {
+      "url": "https://yallasec.com/check-up-gratuito/",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/difesa-e-contrattacco/": {
+      "url": "https://yallasec.com/difesa-e-contrattacco/",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/cyber-training/": {
+      "url": "https://yallasec.com/cyber-training/",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/monitoraggio-integrale/": {
+      "url": "https://yallasec.com/monitoraggio-integrale/",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/assicurazione-cyber/": {
+      "url": "https://yallasec.com/assicurazione-cyber/",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/adempimento-privacy-e-gdpr/": {
+      "url": "https://yallasec.com/adempimento-privacy-e-gdpr/",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/chi-siamo/": {
+      "url": "https://yallasec.com/chi-siamo/",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/mission/": {
+      "url": "https://yallasec.com/mission/",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/faq/": {
+      "url": "https://yallasec.com/faq/",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/contatto/": {
+      "url": "https://yallasec.com/contatto/",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/partners/": {
+      "url": "https://yallasec.com/partners/",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/careers/": {
+      "url": "https://yallasec.com/careers/",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/privacy-policy": {
+      "url": "https://yallasec.com/privacy-policy",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com#soluzioni": {
+      "url": "https://yallasec.com#soluzioni",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/chi-siamo": {
+      "url": "https://yallasec.com/chi-siamo",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/#soluzioni": {
+      "url": "https://yallasec.com/#soluzioni",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/soluzioni/#soluzioni": {
+      "url": "https://yallasec.com/soluzioni/#soluzioni",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/mission": {
+      "url": "https://yallasec.com/mission",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/faq": {
+      "url": "https://yallasec.com/faq",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/check-up-gratuito/#soluzioni": {
+      "url": "https://yallasec.com/check-up-gratuito/#soluzioni",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/difesa-e-contrattacco/#soluzioni": {
+      "url": "https://yallasec.com/difesa-e-contrattacco/#soluzioni",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/contatto": {
+      "url": "https://yallasec.com/contatto",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/cyber-training/#soluzioni": {
+      "url": "https://yallasec.com/cyber-training/#soluzioni",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/monitoraggio-integrale/#soluzioni": {
+      "url": "https://yallasec.com/monitoraggio-integrale/#soluzioni",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/assicurazione-cyber/#soluzioni": {
+      "url": "https://yallasec.com/assicurazione-cyber/#soluzioni",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/chi siamo": {
+      "url": "https://yallasec.com/chi siamo",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/adempimento-privacy-e-gdpr/#soluzioni": {
+      "url": "https://yallasec.com/adempimento-privacy-e-gdpr/#soluzioni",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/careers": {
+      "url": "https://yallasec.com/careers",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/chi-siamo/#soluzioni": {
+      "url": "https://yallasec.com/chi-siamo/#soluzioni",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/soluzioni": {
+      "url": "https://yallasec.com/soluzioni",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/mission/#soluzioni": {
+      "url": "https://yallasec.com/mission/#soluzioni",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/faq/#soluzioni": {
+      "url": "https://yallasec.com/faq/#soluzioni",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/partners": {
+      "url": "https://yallasec.com/partners",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/contatto/#soluzioni": {
+      "url": "https://yallasec.com/contatto/#soluzioni",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/partners/#soluzioni": {
+      "url": "https://yallasec.com/partners/#soluzioni",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/careers/#soluzioni": {
+      "url": "https://yallasec.com/careers/#soluzioni",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/privacy-policy#soluzioni": {
+      "url": "https://yallasec.com/privacy-policy#soluzioni",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/chi-siamo#soluzioni": {
+      "url": "https://yallasec.com/chi-siamo#soluzioni",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/mission#soluzioni": {
+      "url": "https://yallasec.com/mission#soluzioni",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/faq#soluzioni": {
+      "url": "https://yallasec.com/faq#soluzioni",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/contatto#soluzioni": {
+      "url": "https://yallasec.com/contatto#soluzioni",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/chi siamo#soluzioni": {
+      "url": "https://yallasec.com/chi siamo#soluzioni",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/careers#soluzioni": {
+      "url": "https://yallasec.com/careers#soluzioni",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/soluzioni#soluzioni": {
+      "url": "https://yallasec.com/soluzioni#soluzioni",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    },
+    "https://yallasec.com/partners#soluzioni": {
+      "url": "https://yallasec.com/partners#soluzioni",
+      "parameters": [],
+      "security_contexts": [],
+      "risks": [],
+      "path_context": "GENERIC_CONTEXT"
+    }
+  },
+  "forms_analyzed": [
+    {
+      "page_url": "https://yallasec.com",
+      "form_data": {
+        "action": "https://yallasec.com/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/",
+      "form_data": {
+        "action": "https://yallasec.com/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/soluzioni/",
+      "form_data": {
+        "action": "https://yallasec.com/soluzioni/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/check-up-gratuito/",
+      "form_data": {
+        "action": "https://yallasec.com/check-up-gratuito/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/difesa-e-contrattacco/",
+      "form_data": {
+        "action": "https://yallasec.com/difesa-e-contrattacco/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/cyber-training/",
+      "form_data": {
+        "action": "https://yallasec.com/cyber-training/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/monitoraggio-integrale/",
+      "form_data": {
+        "action": "https://yallasec.com/monitoraggio-integrale/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/assicurazione-cyber/",
+      "form_data": {
+        "action": "https://yallasec.com/assicurazione-cyber/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/adempimento-privacy-e-gdpr/",
+      "form_data": {
+        "action": "https://yallasec.com/adempimento-privacy-e-gdpr/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/chi-siamo/",
+      "form_data": {
+        "action": "https://yallasec.com/chi-siamo/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/mission/",
+      "form_data": {
+        "action": "https://yallasec.com/mission/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/faq/",
+      "form_data": {
+        "action": "https://yallasec.com/faq/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/faq/",
+      "form_data": {
+        "action": "https://yallasec.com/faq/#wpcf7-f174-o2",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o2",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/contatto/",
+      "form_data": {
+        "action": "https://yallasec.com/contatto/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/contatto/",
+      "form_data": {
+        "action": "https://yallasec.com/contatto/#wpcf7-f174-o2",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o2",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/partners/",
+      "form_data": {
+        "action": "https://yallasec.com/partners/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/partners/",
+      "form_data": {
+        "action": "https://yallasec.com/partners/#wpcf7-f461-o2",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "461",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f461-o2",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "titolo",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/careers/",
+      "form_data": {
+        "action": "https://yallasec.com/careers/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/careers/",
+      "form_data": {
+        "action": "https://yallasec.com/careers/#wpcf7-f209-o2",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "209",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f209-o2",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "file-73",
+            "type": "file",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/privacy-policy",
+      "form_data": {
+        "action": "https://yallasec.com/privacy-policy/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/chi-siamo",
+      "form_data": {
+        "action": "https://yallasec.com/chi-siamo/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/soluzioni/#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/soluzioni/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/mission",
+      "form_data": {
+        "action": "https://yallasec.com/mission/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/faq",
+      "form_data": {
+        "action": "https://yallasec.com/faq/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/faq",
+      "form_data": {
+        "action": "https://yallasec.com/faq/#wpcf7-f174-o2",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o2",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/check-up-gratuito/#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/check-up-gratuito/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/difesa-e-contrattacco/#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/difesa-e-contrattacco/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/contatto",
+      "form_data": {
+        "action": "https://yallasec.com/contatto/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/contatto",
+      "form_data": {
+        "action": "https://yallasec.com/contatto/#wpcf7-f174-o2",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o2",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/cyber-training/#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/cyber-training/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/monitoraggio-integrale/#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/monitoraggio-integrale/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/assicurazione-cyber/#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/assicurazione-cyber/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/chi siamo",
+      "form_data": {
+        "action": "https://yallasec.com/chi%20siamo/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/adempimento-privacy-e-gdpr/#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/adempimento-privacy-e-gdpr/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/careers",
+      "form_data": {
+        "action": "https://yallasec.com/careers/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/careers",
+      "form_data": {
+        "action": "https://yallasec.com/careers/#wpcf7-f209-o2",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "209",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f209-o2",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "file-73",
+            "type": "file",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/chi-siamo/#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/chi-siamo/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/soluzioni/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/mission/#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/mission/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/faq/#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/faq/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/faq/#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/faq/#wpcf7-f174-o2",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o2",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/partners",
+      "form_data": {
+        "action": "https://yallasec.com/partners/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/partners",
+      "form_data": {
+        "action": "https://yallasec.com/partners/#wpcf7-f461-o2",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "461",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f461-o2",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "titolo",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/contatto/#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/contatto/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/contatto/#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/contatto/#wpcf7-f174-o2",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o2",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/partners/#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/partners/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/partners/#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/partners/#wpcf7-f461-o2",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "461",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f461-o2",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "titolo",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/careers/#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/careers/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/careers/#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/careers/#wpcf7-f209-o2",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "209",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f209-o2",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "file-73",
+            "type": "file",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/privacy-policy#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/privacy-policy/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/chi-siamo#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/chi-siamo/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/mission#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/mission/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/faq#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/faq/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/faq#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/faq/#wpcf7-f174-o2",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o2",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/contatto#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/contatto/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/contatto#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/contatto/#wpcf7-f174-o2",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o2",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/chi siamo#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/chi%20siamo/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/careers#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/careers/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/careers#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/careers/#wpcf7-f209-o2",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "209",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f209-o2",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "file-73",
+            "type": "file",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/soluzioni#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/soluzioni/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/partners#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/partners/#wpcf7-f174-o1",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "174",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f174-o1",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "tel-911",
+            "type": "tel",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "menu-687",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "page_url": "https://yallasec.com/partners#soluzioni",
+      "form_data": {
+        "action": "https://yallasec.com/partners/#wpcf7-f461-o2",
+        "method": "POST",
+        "inputs": [
+          {
+            "name": "_wpcf7",
+            "type": "hidden",
+            "value": "461",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_version",
+            "type": "hidden",
+            "value": "6.0.5",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_locale",
+            "type": "hidden",
+            "value": "it_IT",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_unit_tag",
+            "type": "hidden",
+            "value": "wpcf7-f461-o2",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_container_post",
+            "type": "hidden",
+            "value": "0",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_posted_data_hash",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "_wpcf7_recaptcha_response",
+            "type": "hidden",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-name",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "text-624",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "azienda",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "titolo",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "your-message",
+            "type": "text",
+            "value": "",
+            "required": false
+          },
+          {
+            "name": "acceptance-230",
+            "type": "checkbox",
+            "value": "1",
+            "required": false
+          },
+          {
+            "name": "",
+            "type": "submit",
+            "value": "Invia",
+            "required": false
+          }
+        ]
+      }
+    }
+  ],
+  "security_findings": [],
+  "statistics": {
+    "urls_visited": 48,
+    "forms_found": 64,
+    "security_findings": 0
+  }
+}
