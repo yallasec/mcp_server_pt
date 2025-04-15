@@ -1,17 +1,16 @@
-from flask import Flask, request, jsonify
 import requests
 from bs4 import BeautifulSoup
 import json
 import logging
 from urllib.parse import urljoin
-from typing import Dict, List, Set, Optional
+from typing import Dict, List, Set, Optional, Tuple
 import datetime
 import uuid
 # server.py
 from fastmcp import FastMCP
 
 # Create an MCP server
-mcp = FastMCP("Demo")
+mcp = FastMCP("Demo1")
 
 # # MCP Tool Decorator
 # def mcp_tool(func):
@@ -24,163 +23,1342 @@ mcp = FastMCP("Demo")
 class WebAppMCP:
     def __init__(self, target_url: str, output_file: str = "mcp_results.json", delay: float = 0.5):
         """
-        Initialize WebAppMCP with FastMCP integration
+        Enhanced initialization with better configuration management
+        """
+        self.config = {
+            "target_url": target_url,
+            "output_file": output_file,
+            "delay": delay,
+            "max_retries": 3,
+            "timeout": 30,
+            "user_agent": "WebAppMCP/1.0",
+            "headers": {
+                "User-Agent": "WebAppMCP/1.0",
+                "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+                "Accept-Language": "en-US,en;q=0.5",
+                "Accept-Encoding": "gzip, deflate",
+                "Connection": "keep-alive",
+                "DNT": "1"
+            }
+        }
+        
+        self.session = requests.Session()
+        self.session.headers.update(self.config["headers"])
+        
+        # Initialize fastmcp components
+        self.param_analyzer = ParameterAnalyzer()
+        self.test_gen = TestCaseGenerator()
+        self.context_handler = ContextHandler()
+        
+        # # Enhanced logging setup
+        # self._setup_logging()
+        """
+        Initialize the Master Control Program for web application testing
+        
+        Args:
+            target_url: The base URL of the target web application
+            output_file: File to save the results
+            delay: Delay between requests in seconds to avoid overwhelming the server
         """
         self.target_url = target_url
         self.output_file = output_file
         self.delay = delay
-
-        # Initialize FastMCP components
-        # self.param_analyzer = ParameterAnalyzer()
-        # self.test_gen = TestCaseGenerator()
-        # self.context_handler = ContextHandler()
-
-        # Setup logging
-        self._setup_logging()
-
-        # Initialize visited URLs and results
-        self.visited_urls = set()
-        self.results = []
-
-    def _setup_logging(self):
-        """Initialize logging configuration"""
-        self.logger = logging.getLogger("WebAppMCP")
-        self.logger.setLevel(logging.INFO)
+        self.session = requests.Session()
+        self.visited_urls: Set[str] = set()
+        self.pages_tree = {}
+        self.forms_data = []
+        self.inputs_data = []
+        self.auth_info = {
+            "login_url": None,
+            "logout_url": None,
+            "authenticated": False,
+            "auth_type": None,  # "cookie" or "bearer"
+            "auth_data": None
+        }
+        self.potential_edge_cases = []
         
-        handler = logging.StreamHandler()
-        formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-        handler.setFormatter(formatter)
-        self.logger.addHandler(handler)
+        # Configure logging
+        logging.basicConfig(
+            level=logging.INFO,
+            format='%(asctime)s - %(levelname)s - %(message)s',
+            handlers=[
+                logging.FileHandler("mcp_log.txt"),
+                logging.StreamHandler()
+            ]
+        )
+        self.logger = logging.getLogger("WebAppMCP")
+        
+        # Common input patterns for detection
+        self.input_patterns = {
+            "email": r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}',
+            "phone": r'\d{10,15}',
+            "date": r'\d{4}-\d{2}-\d{2}',
+            "credit_card": r'\d{4}[\s-]?\d{4}[\s-]?\d{4}[\s-]?\d{4}',
+            "uuid": r'[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}',
+            "username": r'^[a-zA-Z0-9_]{3,20}$',
+            "password": r'.{8,}',
+            "zip_code": r'\d{5}(?:-\d{4})?',
+            "ip_address": r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}'
+        }
+        
+        # Sample values for different input types
+        self.input_samples = {
+            "text": "Sample Text",
+            "email": "user@example.com",
+            "password": "SecurePassword123!",
+            "number": "12345",
+            "tel": "1234567890",
+            "date": datetime.datetime.now().strftime("%Y-%m-%d"),
+            "datetime-local": datetime.datetime.now().strftime("%Y-%m-%dT%H:%M"),
+            "month": datetime.datetime.now().strftime("%Y-%m"),
+            "week": datetime.datetime.now().strftime("%Y-W%W"),
+            "time": datetime.datetime.now().strftime("%H:%M"),
+            "url": "https://example.com",
+            "search": "search query",
+            "uuid": str(uuid.uuid4()),
+            "file": None,  # Will be handled separately
+            "hidden": "hidden_value",
+            "checkbox": "on",
+            "radio": "option1",
+            "select": None  # Will be determined from options
+        }
+    
+    def _make_request(self, url: str, method: str = "GET", data: Dict = None, headers: Dict = None) -> Tuple[requests.Response, Optional[BeautifulSoup]]:
+        """
+        Enhanced request handling with retry logic and better error handling
+        """
+        if headers:
+            request_headers = {**self.config["headers"], **headers}
+        else:
+            request_headers = self.config["headers"]
 
-    @mcp.tool()
-    def crawl(self, max_pages: int = 100):
-        """Custom crawling logic using requests and BeautifulSoup"""
+        for attempt in range(self.config["max_retries"]):
+            try:
+                time.sleep(self.delay)
+                
+                if method.upper() == "GET":
+                    response = self.session.get(
+                        url, 
+                        headers=request_headers,
+                        timeout=self.config["timeout"],
+                        allow_redirects=True
+                    )
+                elif method.upper() == "POST":
+                    response = self.session.post(
+                        url, 
+                        data=data,
+                        headers=request_headers,
+                        timeout=self.config["timeout"],
+                        allow_redirects=True
+                    )
+                else:
+                    self.logger.error(f"Unsupported HTTP method: {method}")
+                    return None, None
+
+                # Check response validity
+                response.raise_for_status()
+                
+                # Process response
+                if 'text/html' in response.headers.get('Content-Type', ''):
+                    soup = BeautifulSoup(response.text, 'html.parser')
+                    return response, soup
+                else:
+                    return response, None
+
+            except requests.exceptions.RequestException as e:
+                self.logger.warning(f"Request attempt {attempt + 1} failed for {url}: {str(e)}")
+                if attempt == self.config["max_retries"] - 1:
+                    self.logger.error(f"All retry attempts failed for {url}")
+                    return None, None
+                time.sleep(2 ** attempt)  # Exponential backoff
+    
+    def normalize_url(self, url: str) -> str:
+        """
+        Normalize URL to prevent visiting the same page with different parameters
+        """
+        parsed = urlparse(url)
+        return f"{parsed.scheme}://{parsed.netloc}{parsed.path}"
+    
+    def is_same_domain(self, url: str) -> bool:
+        """
+        Check if URL belongs to the same domain as the target
+        """
+        target_domain = urlparse(self.target_url).netloc
+        url_domain = urlparse(url).netloc
+        return url_domain == target_domain or url_domain.endswith('.' + target_domain)
+    @mcp.resource("crawl://{url}")
+    def crawl(self, max_pages: int = 100,url:str) -> str:
+        """
+        Crawl the web application to discover pages and build the tree
+        """
+        self.target_url = url
         self.logger.info(f"Starting crawl of {self.target_url}")
         queue = [self.target_url]
-
+        
         while queue and len(self.visited_urls) < max_pages:
             current_url = queue.pop(0)
-
-            if current_url in self.visited_urls:
+            normalized_url = self.normalize_url(current_url)
+            
+            if normalized_url in self.visited_urls:
                 continue
+                
+            self.logger.info(f"Crawling {current_url}")
+            response, soup = self._make_request(current_url)
+            
+            if not soup:
+                continue
+                
+            self.visited_urls.add(normalized_url)
+            
+            # Extract page details
+            title = soup.title.text.strip() if soup.title else "No Title"
+            self.pages_tree[normalized_url] = {
+                "title": title,
+                "links": [],
+                "forms": [],
+                "buttons": []
+            }
+            
+            # Check if this might be a login page
+            if self._is_login_page(soup, current_url):
+                self.auth_info["login_url"] = current_url
+                self.logger.info(f"Potential login page found: {current_url}")
+            
+            # Check if this might be a logout page/link
+            if self._is_logout_page(soup, current_url):
+                self.auth_info["logout_url"] = current_url
+                self.logger.info(f"Potential logout page/link found: {current_url}")
+            
+            # Extract links
+            for link in soup.find_all('a', href=True):
+                href = link.get('href')
+                if not href or href.startswith('#') or href.startswith('javascript:'):
+                    continue
+                    
+                absolute_url = urljoin(current_url, href)
+                if self.is_same_domain(absolute_url):
+                    link_text = link.text.strip() or "No Text"
+                    self.pages_tree[normalized_url]["links"].append({
+                        "url": absolute_url,
+                        "text": link_text
+                    })
+                    queue.append(absolute_url)
+            
+            # Extract forms
+            self._extract_forms(soup, current_url)
+            
+            # Extract buttons (that aren't in forms)
+            for button in soup.find_all('button'):
+                if not button.find_parent('form'):
+                    button_text = button.text.strip() or "No Text"
+                    button_id = button.get('id', '')
+                    button_class = button.get('class', '')
+                    self.pages_tree[normalized_url]["buttons"].append({
+                        "text": button_text,
+                        "id": button_id,
+                        "class": button_class
+                    })
+            
+        self.logger.info(f"Crawl completed. Visited {len(self.visited_urls)} pages.")
+        return self.visited_urls
+    
+    @mcp.resource("extract://{page_url}")
+    def _extract_forms(self, soup: BeautifulSoup, page_url: str) -> str:
+        """
+        Extract form details from a page
+        """
+        forms = soup.find_all('form')
+        page_forms = []
+        
+        for form in forms:
+            form_action = form.get('action', '')
+            form_method = form.get('method', 'get').lower()
+            form_id = form.get('id', '')
+            form_name = form.get('name', '')
+            
+            # Determine the absolute form submission URL
+            form_url = urljoin(page_url, form_action) if form_action else page_url
+            
+            # Extract form inputs
+            inputs = []
+            for input_tag in form.find_all(['input', 'textarea', 'select']):
+                input_data = self._analyze_input(input_tag)
+                if input_data:
+                    inputs.append(input_data)
+                    self.inputs_data.append({
+                        "page_url": page_url,
+                        "form_url": form_url,
+                        "form_id": form_id,
+                        "input_data": input_data
+                    })
+            
+            # Add buttons within the form
+            for button in form.find_all('button'):
+                button_type = button.get('type', 'submit')
+                button_name = button.get('name', '')
+                button_value = button.get('value', '')
+                button_text = button.text.strip() or "No Text"
+                
+                inputs.append({
+                    "type": "button",
+                    "html_type": button_type,
+                    "name": button_name,
+                    "value": button_value,
+                    "text": button_text
+                })
+            
+            form_data = {
+                "action": form_url,
+                "method": form_method,
+                "id": form_id,
+                "name": form_name,
+                "inputs": inputs
+            }
+            
+            page_forms.append(form_data)
+            self.forms_data.append({
+                "page_url": page_url,
+                "form_data": form_data
+            })
+            
+            # Add to page tree
+            normalized_url = self.normalize_url(page_url)
+            if normalized_url in self.pages_tree:
+                self.pages_tree[normalized_url]["forms"].append(form_data)
+            
+        return self.pages_tree[normalized_url]["forms"]
+        
+    def _analyze_input(self, input_tag) -> Dict:
+        """
+        Analyze an input element and determine its type and properties
+        """
+        tag_type = input_tag.name
+        
+        if tag_type == 'input':
+            input_type = input_tag.get('type', 'text')
+            input_name = input_tag.get('name', '')
+            input_id = input_tag.get('id', '')
+            input_placeholder = input_tag.get('placeholder', '')
+            input_required = input_tag.has_attr('required')
+            input_pattern = input_tag.get('pattern', '')
+            input_min = input_tag.get('min', '')
+            input_max = input_tag.get('max', '')
+            
+            return {
+                "name": input_name,
+                "id": input_id,
+                "type": "input",
+                "html_type": input_type,
+                "placeholder": input_placeholder,
+                "required": input_required,
+                "pattern": input_pattern,
+                "min": input_min,
+                "max": input_max,
+                "inferred_type": self._infer_input_type(input_name, input_type, input_placeholder, input_pattern)
+            }
+            
+        elif tag_type == 'textarea':
+            input_name = input_tag.get('name', '')
+            input_id = input_tag.get('id', '')
+            input_placeholder = input_tag.get('placeholder', '')
+            input_required = input_tag.has_attr('required')
+            
+            return {
+                "name": input_name,
+                "id": input_id,
+                "type": "textarea",
+                "html_type": "textarea",
+                "placeholder": input_placeholder,
+                "required": input_required,
+                "inferred_type": "text"
+            }
+            
+        elif tag_type == 'select':
+            input_name = input_tag.get('name', '')
+            input_id = input_tag.get('id', '')
+            input_required = input_tag.has_attr('required')
+            options = []
+            
+            for option in input_tag.find_all('option'):
+                option_value = option.get('value', '')
+                option_text = option.text.strip()
+                options.append({
+                    "value": option_value,
+                    "text": option_text
+                })
+            
+            return {
+                "name": input_name,
+                "id": input_id,
+                "type": "select",
+                "html_type": "select",
+                "required": input_required,
+                "options": options,
+                "inferred_type": "choice"
+            }
+        
+        return None
 
-            self.logger.info(f"Visiting: {current_url}")
-            try:
-                response = requests.get(current_url, timeout=10)
-                soup = BeautifulSoup(response.text, 'html.parser')
+    def _analyze_parameters(self, url: str, form_data: Optional[Dict] = None) -> Dict:
+        """
+        Enhanced parameter analysis with context detection and vulnerability patterns
+        """
+        results = {
+            "url_parameters": [],
+            "form_parameters": [],
+            "contexts": set(),
+            "potential_vulnerabilities": []
+        }
 
-                # Analyze the page
-                self.analyze_page(current_url, response.text)
+        # Analyze URL parameters
+        if '?' in url:
+            params = self.param_analyzer.extract_url_parameters(url)
+            for param in params:
+                context = self.context_handler.detect_context(param.name, param.value)
+                vuln_patterns = self._check_vulnerability_patterns(param.name, param.value)
+                
+                results["url_parameters"].append({
+                    "name": param.name,
+                    "value": param.value,
+                    "type": param.type.value,
+                    "context": context.value,
+                    "potential_vulnerabilities": vuln_patterns
+                })
+                results["contexts"].add(context.value)
 
-                # Extract links and add them to the queue
-                for link in soup.find_all('a', href=True):
-                    href = urljoin(current_url, link['href'])
-                    if href not in self.visited_urls and href.startswith(self.target_url):
-                        queue.append(href)
+        # Analyze form parameters if provided
+        if form_data:
+            form_params = self.param_analyzer.extract_form_parameters(form_data)
+            for param in form_params:
+                context = self.context_handler.detect_context(param.name, param.value)
+                vuln_patterns = self._check_vulnerability_patterns(param.name, param.value)
+                
+                results["form_parameters"].append({
+                    "name": param.name,
+                    "value": param.value,
+                    "type": param.type.value,
+                    "context": context.value,
+                    "potential_vulnerabilities": vuln_patterns
+                })
+                results["contexts"].add(context.value)
 
-                self.visited_urls.add(current_url)
-            except Exception as e:
-                self.logger.error(f"Error visiting {current_url}: {e}")
+        return results
 
-    @mcp.tool()
-    def analyze_page(self, url: str, html_content: str):
-        """Analyze a page"""
-        self.logger.info(f"Analyzing page: {url}")
-        params = self.param_analyzer.extract_url_parameters(url)
-        test_cases = []
-
-        for param in params:
-            context = self.context_handler.detect_context(param.name, param.value)
-            test_cases.extend(self.test_gen.generate_for_parameter(
-                param_name=param.name,
-                param_type=param.type,
-                security_context=context
-            ))
-
-        self.results.append({
-            "url": url,
-            "parameters": params,
-            "test_cases": test_cases
-        })
-
-    @mcp.tool()
+    def _check_vulnerability_patterns(self, param_name: str, param_value: str) -> List[str]:
+        """
+        Check parameters for common vulnerability patterns
+        """
+        patterns = []
+        
+        # SQL Injection patterns
+        if any(char in param_value for char in "';\""):
+            patterns.append("SQL_INJECTION")
+        
+        # XSS patterns
+        if any(char in param_value for char in "<>"):
+            patterns.append("XSS")
+        
+        # Path traversal
+        if "../" in param_value or "..\\\\" in param_value:
+            patterns.append("PATH_TRAVERSAL")
+        
+        # Command injection
+        if any(char in param_value for char in "|;&$"):
+            patterns.append("COMMAND_INJECTION")
+        
+        return patterns
+    
+    def _infer_input_type(self, name: str, html_type: str, placeholder: str, pattern: str) -> str:
+        """
+        Infer the semantic type of an input field based on its attributes
+        """
+        name_lower = name.lower()
+        placeholder_lower = placeholder.lower()
+        
+        # First check HTML type which is the most reliable
+        if html_type in ['email', 'password', 'number', 'tel', 'date', 'datetime-local', 
+                         'month', 'week', 'time', 'url', 'file', 'hidden', 'checkbox', 'radio']:
+            return html_type
+        
+        # Check for common field name patterns
+        if any(word in name_lower for word in ['email', 'e-mail']):
+            return 'email'
+        elif any(word in name_lower for word in ['password', 'passwd', 'pwd']):
+            return 'password'
+        elif any(word in name_lower for word in ['phone', 'tel', 'mobile', 'cell']):
+            return 'tel'
+        elif any(word in name_lower for word in ['date', 'dob', 'birthday']):
+            return 'date'
+        elif any(word in name_lower for word in ['time']):
+            return 'time'
+        elif any(word in name_lower for word in ['url', 'website', 'link']):
+            return 'url'
+        elif any(word in name_lower for word in ['file', 'upload', 'attachment']):
+            return 'file'
+        elif any(word in name_lower for word in ['price', 'cost', 'amount', 'quantity', 'qty', 'num']):
+            return 'number'
+        elif any(word in name_lower for word in ['username', 'user', 'login']):
+            return 'username'
+        elif any(word in name_lower for word in ['zip', 'postal']):
+            return 'zip_code'
+        elif any(word in name_lower for word in ['uuid', 'guid']):
+            return 'uuid'
+        elif any(word in name_lower for word in ['search', 'query']):
+            return 'search'
+        elif any(word in name_lower for word in ['cc', 'creditcard', 'credit-card', 'card']):
+            return 'credit_card'
+        
+        # Check placeholder text for clues
+        if placeholder:
+            if any(word in placeholder_lower for word in ['email', 'e-mail']):
+                return 'email'
+            elif any(word in placeholder_lower for word in ['password']):
+                return 'password'
+            elif any(word in placeholder_lower for word in ['phone', 'tel']):
+                return 'tel'
+            elif re.search(r'\d{1,2}[-/]\d{1,2}[-/]\d{2,4}', placeholder_lower):
+                return 'date'
+            elif re.search(r'\d+', placeholder_lower) and any(word in placeholder_lower for word in ['price', 'cost', 'amount']):
+                return 'number'
+        
+        # Check if pattern attribute gives any clues
+        if pattern:
+            for type_name, regex in self.input_patterns.items():
+                if re.search(regex, pattern):
+                    return type_name
+        
+        # Default to text if we can't determine the type
+        return 'text'
+    
+    def _is_login_page(self, soup: BeautifulSoup, url: str) -> bool:
+        """
+        Determine if a page might be a login page
+        """
+        # Check URL for login indicators
+        url_lower = url.lower()
+        if any(word in url_lower for word in ['login', 'signin', 'sign-in', 'auth']):
+            return True
+        
+        # Check for login form indicators
+        forms = soup.find_all('form')
+        for form in forms:
+            form_action = form.get('action', '').lower()
+            if any(word in form_action for word in ['login', 'signin', 'auth']):
+                return True
+            
+            # Check if form contains password input
+            has_password = False
+            has_username = False
+            
+            for input_tag in form.find_all('input'):
+                input_type = input_tag.get('type', '').lower()
+                input_name = input_tag.get('name', '').lower()
+                
+                if input_type == 'password':
+                    has_password = True
+                elif any(word in input_name for word in ['user', 'email', 'login', 'username']):
+                    has_username = True
+            
+            if has_password and has_username:
+                return True
+        
+        # Check for common login page text
+        page_text = soup.get_text().lower()
+        login_phrases = ['log in', 'sign in', 'login', 'signin', 'username', 'password']
+        if any(phrase in page_text for phrase in login_phrases):
+            form_count = len(forms)
+            password_inputs = len(soup.find_all('input', {'type': 'password'}))
+            if form_count > 0 and password_inputs > 0:
+                return True
+        
+        return False
+    
+    def _is_logout_page(self, soup: BeautifulSoup, url: str) -> bool:
+        """
+        Determine if a page or link might be related to logout functionality
+        """
+        # Check URL for logout indicators
+        url_lower = url.lower()
+        if any(word in url_lower for word in ['logout', 'signout', 'sign-out']):
+            return True
+        
+        # Check for logout links
+        for link in soup.find_all('a', href=True):
+            href = link.get('href', '').lower()
+            link_text = link.text.strip().lower()
+            
+            if any(word in href for word in ['logout', 'signout', 'sign-out']):
+                return True
+            if any(word in link_text for word in ['logout', 'log out', 'sign out', 'signout']):
+                return True
+        
+        # Check for logout buttons
+        for button in soup.find_all('button'):
+            button_text = button.text.strip().lower()
+            if any(word in button_text for word in ['logout', 'log out', 'sign out', 'signout']):
+                return True
+        
+        return False
+    
     def authenticate(self, username: str, password: str) -> bool:
-        """Authenticate with the application"""
-        self.logger.info(f"Authenticating with username: {username}")
-        # Add authentication logic here
-        return True
+        """
+        Attempt to authenticate with the application
+        """
+        if not self.auth_info["login_url"]:
+            self.logger.error("No login URL found. Run crawl() first.")
+            return False
+        
+        login_url = self.auth_info["login_url"]
+        self.logger.info(f"Attempting to authenticate at {login_url}")
+        
+        # Get the login page to analyze the form
+        response, soup = self._make_request(login_url)
+        if not soup:
+            self.logger.error("Could not access login page")
+            return False
+        
+        # Find the login form
+        login_form = None
+        for form in soup.find_all('form'):
+            has_password = False
+            for input_tag in form.find_all('input'):
+                if input_tag.get('type') == 'password':
+                    has_password = True
+                    break
+            
+            if has_password:
+                login_form = form
+                break
+        
+        if not login_form:
+            self.logger.error("Could not find login form")
+            return False
+        
+        # Prepare login data
+        login_data = {}
+        username_field = None
+        password_field = None
+        
+        for input_tag in login_form.find_all('input'):
+            input_type = input_tag.get('type', '')
+            input_name = input_tag.get('name', '')
+            
+            if input_type == 'password' and input_name:
+                password_field = input_name
+            elif input_type == 'text' or input_type == 'email':
+                if input_name:
+                    username_field = input_name
+            
+            # Include all hidden fields
+            if input_type == 'hidden' and input_name:
+                login_data[input_name] = input_tag.get('value', '')
+        
+        if not username_field or not password_field:
+            self.logger.error("Could not identify username or password fields")
+            return False
+        
+        login_data[username_field] = username
+        login_data[password_field] = password
+        
+        # Submit the login form
+        form_action = login_form.get('action', '')
+        form_method = login_form.get('method', 'post').lower()
+        form_url = urljoin(login_url, form_action) if form_action else login_url
+        
+        response, _ = self._make_request(form_url, method=form_method, data=login_data)
+        if not response:
+            self.logger.error("Login request failed")
+            return False
+        
+        # Check if authentication was successful
+        if response.url != login_url and response.status_code == 200:
+            self.auth_info["authenticated"] = True
+            
+            # Determine authentication type
+            if 'Authorization' in self.session.headers and 'Bearer' in self.session.headers['Authorization']:
+                self.auth_info["auth_type"] = "bearer"
+                self.auth_info["auth_data"] = self.session.headers['Authorization']
+            else:
+                self.auth_info["auth_type"] = "cookie"
+                self.auth_info["auth_data"] = dict(self.session.cookies)
+            
+            self.logger.info(f"Authentication successful using {self.auth_info['auth_type']}")
+            return True
+        else:
+            self.logger.error("Authentication failed")
+            return False
 
-    @mcp.tool()
     def generate_test_cases(self):
-        """Generate test cases"""
-        self.logger.info("Generating test cases")
-        # Add test case generation logic here
-        return {"test_cases": "Generated test cases"}
+        """
+        Enhanced test case generation with broader coverage and smarter analysis
+        """
+        self.logger.info("Generating comprehensive test cases")
+        
+        test_suites = {
+            "authentication": self._generate_auth_test_cases(),
+            "authorization": self._generate_permission_test_cases(),
+            "input_validation": self._generate_input_validation_cases(),
+            "business_logic": self._generate_business_logic_cases(),
+            "session_management": self._generate_session_test_cases(),
+            "api_security": self._generate_api_test_cases()
+        }
+        
+        # Analyze test coverage
+        coverage_metrics = self._analyze_test_coverage(test_suites)
+        
+        # Generate test execution plan
+        execution_plan = self._create_test_execution_plan(test_suites)
+        
+        return {
+            "test_suites": test_suites,
+            "coverage_metrics": coverage_metrics,
+            "execution_plan": execution_plan
+        }
 
-    @mcp.tool()
+    def _analyze_test_coverage(self, test_suites: Dict) -> Dict:
+        """
+        Analyze test coverage metrics
+        """
+        coverage = {
+            "total_test_cases": sum(len(suite) for suite in test_suites.values()),
+            "coverage_by_category": {},
+            "untested_components": [],
+            "risk_areas": []
+        }
+        
+        # Calculate coverage metrics
+        for category, suite in test_suites.items():
+            coverage["coverage_by_category"][category] = {
+                "test_count": len(suite),
+                "coverage_percentage": self._calculate_coverage_percentage(category, suite)
+            }
+        
+        return coverage
+    def _handle_security_context(self, context_type: str, data: Dict) -> Dict:
+        """
+        Enhanced security context handling with advanced detection and validation
+        """
+        context_handlers = {
+            "SQL": self._handle_sql_context,
+            "XSS": self._handle_xss_context,
+            "CSRF": self._handle_csrf_context,
+            "FILE": self._handle_file_context,
+            "AUTH": self._handle_auth_context
+        }
+        
+        handler = context_handlers.get(context_type.upper())
+        if handler:
+            return handler(data)
+        
+        return self._handle_generic_context(data)
+
+    def _handle_sql_context(self, data: Dict) -> Dict:
+        """
+        Handle SQL injection context
+        """
+        return {
+            "context": "SQL",
+            "risk_level": "HIGH",
+            "validation_required": True,
+            "sanitization_rules": [
+                "Parameterize queries",
+                "Escape special characters",
+                "Use prepared statements"
+            ],
+            "test_cases": self._generate_sql_injection_tests(data)
+        }
+
+    def _generate_idor_test_cases(self):
+        """
+        Generate test cases for Insecure Direct Object References
+        """
+        # Look for URLs with numeric IDs
+        id_patterns = [
+            r'/(\d+)/?$',  # /123/
+            r'/[^/]+/(\d+)/?$',  # /resource/123/
+            r'[?&]id=(\d+)',  # ?id=123
+            r'[?&][^=]+=(\d+)',  # ?user_id=123
+            r'/([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})/?$'  # UUIDs
+        ]
+        
+        idor_opportunities = []
+        
+        for url in self.visited_urls:
+            for pattern in id_patterns:
+                matches = re.findall(pattern, url)
+                if matches:
+                    for match in matches:
+                        idor_opportunities.append({
+                            "url": url,
+                            "id_value": match,
+                            "pattern": pattern
+                        })
+        
+        if idor_opportunities:
+            self.potential_edge_cases.append({
+                "category": "IDOR (Insecure Direct Object References)",
+                "description": "These URLs contain IDs that might be manipulated to access unauthorized resources",
+                "opportunities": idor_opportunities,
+                "test_suggestions": [
+                    "Change numeric IDs to access other users' data",
+                    "Try sequential IDs (increment/decrement)",
+                    "Use completely different UUIDs",
+                    "Test with IDs belonging to other roles"
+                ]
+            })
+    
+    def _generate_math_test_cases(self):
+        """
+        Generate test cases for mathematical or calculation bugs
+        """
+        calculation_forms = []
+        
+        # Look for forms with multiple number
+        # IDOR test cases
+        self._generate_idor_test_cases()
+        
+        # Mathematical/Calculation bugs
+        self._generate_math_test_cases()
+        
+        # Workflow/State test cases
+        self._generate_workflow_test_cases()
+        
+        # Permission test cases
+        self._generate_permission_test_cases()
+        
+        # # Parameter manipulation test cases
+        # self._generate_parameter_ inputs and possible calculations
+
+        for form_data in self.forms_data:
+            number_inputs = 0
+            price_inputs = 0
+            quantity_inputs = 0
+            
+            for input_data in form_data["form_data"]["inputs"]:
+                if input_data.get("html_type") == "number" or input_data.get("inferred_type") == "number":
+                    number_inputs += 1
+                    
+                    input_name = input_data.get("name", "").lower()
+                    if any(term in input_name for term in ["price", "cost", "amount"]):
+                        price_inputs += 1
+                    if any(term in input_name for term in ["qty", "quantity", "count"]):
+                        quantity_inputs += 1
+            
+            if number_inputs >= 2 or (price_inputs > 0 and quantity_inputs > 0):
+                calculation_forms.append({
+                    "page_url": form_data["page_url"],
+                    "form_action": form_data["form_data"]["action"],
+                    "inputs": [input_data for input_data in form_data["form_data"]["inputs"] 
+                              if input_data.get("html_type") == "number" or input_data.get("inferred_type") == "number"]
+                })
+        
+        if calculation_forms:
+            self.potential_edge_cases.append({
+                "category": "Mathematical/Calculation Bugs",
+                "description": "These forms may involve calculations that could be manipulated",
+                "opportunities": calculation_forms,
+                "test_suggestions": [
+                    "Test with negative numbers",
+                    "Test with extremely large numbers",
+                    "Test with zero values",
+                    "Test with fractional values (e.g., 0.1)",
+                    "Test with multiple decimal places (e.g., 10.99999)",
+                    "Test discount/promotion code logic",
+                    "Check if calculations are properly rounded",
+                    "Verify tax calculations"
+                ]
+            })
+    
+    def _generate_workflow_test_cases(self):
+        """
+        Generate test cases for workflow and state manipulation
+        """
+        # Identify multi-step processes
+        potential_workflows = []
+        
+        # Look for numbered steps in URLs or page titles
+        step_patterns = [
+            r'step[_-]?(\d+)',
+            r'page[_-]?(\d+)',
+            r'/wizard/',
+            r'/checkout/',
+            r'/registration/',
+            r'/onboarding/'
+        ]
+        
+        workflow_pages = {}
+        
+        for url, page_data in self.pages_tree.items():
+            for pattern in step_patterns:
+                if re.search(pattern, url, re.IGNORECASE) or re.search(pattern, page_data["title"], re.IGNORECASE):
+                    # Extract workflow name - try to get the part before step/page indicator
+                    url_parts = url.split('/')
+                    workflow_name = "unknown"
+                    
+                    for part in url_parts:
+                        if re.search(r'checkout|wizard|registration|onboarding', part, re.IGNORECASE):
+                            workflow_name = part
+                            break
+                    
+                    if workflow_name not in workflow_pages:
+                        workflow_pages[workflow_name] = []
+                    
+                    workflow_pages[workflow_name].append({
+                        "url": url,
+                        "title": page_data["title"]
+                    })
+        
+        # Add multi-step workflows to test cases
+        for workflow_name, pages in workflow_pages.items():
+            if len(pages) > 1:
+                potential_workflows.append({
+                    "workflow_name": workflow_name,
+                    "pages": pages
+                })
+        
+        if potential_workflows:
+            self.potential_edge_cases.append({
+                "category": "Workflow/State Manipulation",
+                "description": "These appear to be multi-step processes that could have state manipulation issues",
+                "opportunities": potential_workflows,
+                "test_suggestions": [
+                    "Skip steps by directly accessing later URLs",
+                    "Go back and modify previous inputs",
+                    "Submit forms out of sequence",
+                    "Use browser back button and resubmit with changes",
+                    "Test parallel sessions with the same user",
+                    "Modify hidden state parameters",
+                    "Complete process with missing required fields"
+                ]
+            })
+    
+    def _generate_permission_test_cases(self):
+        """
+        Generate test cases for permission and access control issues
+        """
+        admin_pages = []
+        sensitive_actions = []
+        
+        # Look for admin or management pages
+        admin_patterns = [
+            r'/admin',
+            r'/manage',
+            r'/dashboard',
+            r'/settings',
+            r'/control',
+            r'/profile',
+            r'/account'
+        ]
+        
+        for url in self.visited_urls:
+            for pattern in admin_patterns:
+                if re.search(pattern, url, re.IGNORECASE):
+                    admin_pages.append(url)
+                    break
+        
+        # Look for sensitive actions in forms
+        sensitive_actions_keywords = ['delete', 'remove', 'update', 'edit', 'modify', 'change', 'add', 'create', 'grant']
+        
+        for form_data in self.forms_data:
+            form_action = form_data["form_data"]["action"].lower()
+            
+            for keyword in sensitive_actions_keywords:
+                if keyword in form_action:
+                    sensitive_actions.append({
+                        "page_url": form_data["page_url"],
+                        "form_action": form_data["form_data"]["action"],
+                        "method": form_data["form_data"]["method"]
+                    })
+                    break
+        
+        if admin_pages or sensitive_actions:
+            self.potential_edge_cases.append({
+                "category": "Permission and Access Control Issues",
+                "description": "These pages and actions should be tested for proper access control",
+                "opportunities": {
+                    "admin_pages": admin_pages,
+                    "sensitive_actions": sensitive_actions
+                },
+                "test_suggestions": [
+                    "Access admin pages as a regular user",
+                    "Modify admin parameters in request URLs",
+                    "Access sensitive functions directly via URLs",
+                    "Test horizontal access control (accessing other users' data)",
+                    "Test vertical access control (accessing higher privilege actions)",
+                    "Test with session tokens of different user roles"
+                ]
+            })
+    
+
+
+    def _generate_parameter_manipulation_test_cases(self):
+        """
+        Generate test cases for parameter manipulation using fastmcp
+        """
+        # Initialize fastmcp components
+        param_analyzer = ParameterAnalyzer()
+        test_gen = TestCaseGenerator()
+        context_handler = ContextHandler()
+        
+        analyzed_params = []
+        
+        # Analyze URL parameters
+        for url in self.visited_urls:
+            if '?' in url:
+                params = param_analyzer.extract_url_parameters(url)
+                for param in params:
+                    context = context_handler.detect_context(param.name, param.value)
+                    test_cases = test_gen.generate_for_parameter(
+                        param_name=param.name,
+                        param_type=param.type,
+                        security_context=context
+                    )
+                    analyzed_params.append({
+                        "url": url,
+                        "parameter": param.name,
+                        "type": param.type.value,
+                        "context": context.value,
+                        "test_cases": test_cases
+                    })
+        
+        # Analyze form parameters
+        for form_data in self.forms_data:
+            form_params = param_analyzer.extract_form_parameters(form_data["form_data"])
+            for param in form_params:
+                context = context_handler.detect_context(param.name, param.value)
+                test_cases = test_gen.generate_for_parameter(
+                    param_name=param.name,
+                    param_type=param.type,
+                    security_context=context
+                )
+                analyzed_params.append({
+                    "page_url": form_data["page_url"],
+                    "form_action": form_data["form_data"]["action"],
+                    "parameter": param.name,
+                    "type": param.type.value,
+                    "context": context.value,
+                    "test_cases": test_cases
+                })
+
+        # Group findings by security context
+        context_groups = {}
+        for param in analyzed_params:
+            context = param["context"]
+            if context not in context_groups:
+                context_groups[context] = []
+            context_groups[context].append(param)
+
+        # Add findings to potential edge cases
+        self.potential_edge_cases.append({
+            "category": "Parameter Manipulation",
+            "description": "Parameters analyzed using fastmcp for potential security issues",
+            "opportunities": {
+                "analyzed_parameters": analyzed_params,
+                "context_groups": context_groups
+            },
+            "test_suggestions": test_gen.get_generic_test_cases(),
+            "metadata": {
+                "total_params": len(analyzed_params),
+                "contexts_found": list(context_groups.keys()),
+                "analysis_timestamp": datetime.datetime.now().isoformat()
+            }
+        })
+        
+        self.logger.info(f"Generated test cases for {len(analyzed_params)} parameters across {len(context_groups)} security contexts")
+        
+    def _generate_replay_attack_test_cases(self):
+        """
+        Generate test cases for replay attacks
+        """
+        sensitive_forms = []
+        
+        # Look for forms that might involve sensitive operations
+        sensitive_keywords = ['payment', 'transfer', 'checkout', 'purchase', 'order', 'delete', 'update', 'submit']
+        
+        for form_data in self.forms_data:
+            form_action = form_data["form_data"]["action"].lower()
+            page_url = form_data["page_url"].lower()
+            
+            if any(keyword in form_action for keyword in sensitive_keywords) or any(keyword in page_url for keyword in sensitive_keywords):
+                sensitive_forms.append({
+                    "page_url": form_data["page_url"],
+                    "form_action": form_data["form_data"]["action"],
+                    "method": form_data["form_data"]["method"]
+                })
+        
+        if sensitive_forms:
+            self.potential_edge_cases.append({
+                "category": "Replay Attacks",
+                "description": "These forms handle sensitive operations and should be tested for replay vulnerabilities",
+                "opportunities": sensitive_forms,
+                "test_suggestions": [
+                    "Capture and replay form submissions",
+                    "Check for missing CSRF tokens",
+                    "Submit the same form multiple times",
+                    "Submit stale/expired forms",
+                    "Test if transaction IDs or nonces are validated",
+                    "Replay authenticated requests after logout"
+                ]
+            })
+    
+    def generate_valid_inputs(self, form_data):
+        """
+        Generate valid inputs for a form based on input types
+        """
+        input_values = {}
+        
+        for input_field in form_data["inputs"]:
+            field_name = input_field.get("name", "")
+            html_type = input_field.get("html_type", "text")
+            inferred_type = input_field.get("inferred_type", "text")
+            
+            if not field_name:
+                continue
+                
+            # Skip submit buttons
+            if html_type == "submit" or html_type == "button":
+                continue
+            
+            # Handle checkbox and radio differently
+            if html_type == "checkbox":
+                input_values[field_name] = "on"
+                continue
+                
+            if html_type == "radio":
+                input_values[field_name] = input_field.get("value", "on")
+                continue
+            
+            # For select, use the first option value
+            if input_field.get("type") == "select" and "options" in input_field and input_field["options"]:
+                input_values[field_name] = input_field["options"][0]["value"]
+                continue
+            
+            # For other types, use sample values
+            if inferred_type in self.input_samples:
+                input_values[field_name] = self.input_samples[inferred_type]
+            else:
+                input_values[field_name] = self.input_samples["text"]
+        
+        return input_values
+    
+    def create_user_flows(self):
+        """
+        Identify potential user flows through the application
+        """
+        self.logger.info("Creating potential user flows")
+        
+        # Start with the base page or login if available
+        starting_points = []
+        
+        if self.auth_info["login_url"]:
+            starting_points.append(self.auth_info["login_url"])
+        else:
+            starting_points.append(self.target_url)
+        
+        flows = []
+        
+        for start_point in starting_points:
+            # Simple flow: just follow links in levels
+            # Level 1: Start -> Any page directly linked
+            level1_links = []
+            
+            start_normalized = self.normalize_url(start_point)
+            if start_normalized in self.pages_tree:
+                for link in self.pages_tree[start_normalized]["links"]:
+                    level1_links.append({
+                        "from": start_point,
+                        "to": link["url"],
+                        "text": link["text"]
+                    })
+            
+            # Level 2: Follow links from level 1
+            level2_links = []
+            
+            for l1_link in level1_links:
+                l1_normalized = self.normalize_url(l1_link["to"])
+                if l1_normalized in self.pages_tree:
+                    for link in self.pages_tree[l1_normalized]["links"]:
+                        level2_links.append({
+                            "from": l1_link["to"],
+                            "to": link["url"],
+                            "text": link["text"]
+                        })
+            
+            flows.append({
+                "start": start_point,
+                "level1_links": level1_links,
+                "level2_links": level2_links
+            })
+        
+        # Identify forms completion flows
+        form_flows = []
+        
+        for form_data in self.forms_data:
+            page_url = form_data["page_url"]
+            form = form_data["form_data"]
+            
+            # Generate valid inputs for this form
+            inputs = self.generate_valid_inputs(form)
+            
+            form_flows.append({
+                "page_url": page_url,
+                "form_action": form["action"],
+                "method": form["method"],
+                "inputs": inputs
+            })
+        
+        return {
+            "navigation_flows": flows,
+            "form_flows": form_flows
+        }
+    
+    def summarize_findings(self):
+        """
+        Create a summary of the application structure and potential vulnerabilities
+        """
+        summary = {
+            "target_url": self.target_url,
+            "pages_visited": len(self.visited_urls),
+            "forms_found": len(self.forms_data),
+            "inputs_analyzed": len(self.inputs_data),
+            "authentication": {
+                "login_url": self.auth_info["login_url"],
+                "logout_url": self.auth_info["logout_url"],
+                "auth_type": self.auth_info["auth_type"]
+            },
+            "potential_edge_cases": self.potential_edge_cases
+        }
+        
+        # Add top 5 pages by complexity (number of forms + links)
+        pages_complexity = []
+        
+        for url, page_data in self.pages_tree.items():
+            complexity = len(page_data.get("forms", [])) + len(page_data.get("links", []))
+            pages_complexity.append({
+                "url": url,
+                "title": page_data.get("title", "No Title"),
+                "complexity": complexity
+            })
+        
+        # Sort by complexity
+        pages_complexity.sort(key=lambda x: x["complexity"], reverse=True)
+        
+        summary["complex_pages"] = pages_complexity[:5]  # Top 5 most complex pages
+        
+        return summary
+    
     def save_results(self):
-        """Save results to a file"""
-        self.logger.info(f"Saving results to {self.output_file}")
+        """
+        Save all collected data to a JSON file
+        """
+        results = {
+            "target_url": self.target_url,
+            "pages_tree": self.pages_tree,
+            "forms_data": self.forms_data,
+            "inputs_data": self.inputs_data,
+            "auth_info": self.auth_info,
+            "potential_edge_cases": self.potential_edge_cases,
+            "summary": self.summarize_findings()
+        }
+        
         with open(self.output_file, 'w') as f:
-            json.dump(self.results, f, indent=2)
+            json.dump(results, f, indent=2)
+        
+        self.logger.info(f"Results saved to {self.output_file}")
+    
+    def create_visual_sitemap(self, output_file="sitemap.dot"):
+        """
+        Create a visual sitemap in DOT format (for Graphviz)
+        """
+        with open(output_file, 'w') as f:
+            f.write("digraph sitemap {\n")
+            f.write('  rankdir="LR";\n')
+            f.write('  node [shape=box, style=filled, fillcolor=lightblue];\n')
+            
+            # Add nodes for each page
+            for url in self.visited_urls:
+                normalized = self.normalize_url(url)
+                node_id = str(hash(normalized) % 100000000)
+                
+                if normalized in self.pages_tree:
+                    title = self.pages_tree[normalized].get("title", "No Title")
+                    title = title.replace('"', '\\"')  # Escape quotes in title
+                    f.write(f'  {node_id} [label="{title}\\n{normalized}"];\n')
+                else:
+                    f.write(f'  {node_id} [label="{normalized}"];\n')
+            
+            # Add edges for links
+            for url, page_data in self.pages_tree.items():
+                from_id = str(hash(url) % 100000000)
+                
+                for link in page_data.get("links", []):
+                    to_url = link["url"]
+                    to_normalized = self.normalize_url(to_url)
+                    to_id = str(hash(to_normalized) % 100000000)
+                    
+                    link_text = link["text"].replace('"', '\\"')
+                    if len(link_text) > 20:
+                        link_text = link_text[:17] + "..."
+                    
+                    f.write(f'  {from_id} -> {to_id} [label="{link_text}"];\n')
+            
+            f.write("}\n")
+        
+        self.logger.info(f"Visual sitemap saved to {output_file}")
+        self.logger.info("Visualize with: $ dot -Tpng sitemap.dot -o sitemap.png")
 
-    @mcp.tool()
-    def get_results(self):
-        """Retrieve the results"""
-        return self.results
+# # Flask app setup
+# app = Flask(__name__)
+# mcp_instance = None
 
-# Flask app setup
-app = Flask(__name__)
-mcp_instance = None
+# @app.route('/start', methods=['POST'])
+# def start_crawl():
+#     """Start the crawling process"""
+#     global mcp_instance
+#     data = request.json
+#     target_url = data.get('target_url')
+#     output_file = data.get('output_file', 'mcp_results.json')
+#     max_pages = data.get('max_pages', 100)
+#     delay = data.get('delay', 0.5)
 
-@app.route('/start', methods=['POST'])
-def start_crawl():
-    """Start the crawling process"""
-    global mcp_instance
-    data = request.json
-    target_url = data.get('target_url')
-    output_file = data.get('output_file', 'mcp_results.json')
-    max_pages = data.get('max_pages', 100)
-    delay = data.get('delay', 0.5)
+#     if not target_url:
+#         return jsonify({"error": "target_url is required"}), 400
 
-    if not target_url:
-        return jsonify({"error": "target_url is required"}), 400
+#     # Initialize WebAppMCP
+#     mcp_instance = WebAppMCP(target_url=target_url, output_file=output_file, delay=delay)
+#     mcp_instance.crawl(max_pages=max_pages)
+#     mcp_instance.save_results()
 
-    # Initialize WebAppMCP
-    mcp_instance = WebAppMCP(target_url=target_url, output_file=output_file, delay=delay)
-    mcp_instance.crawl(max_pages=max_pages)
-    mcp_instance.save_results()
+#     return jsonify({"message": "Crawling completed", "output_file": output_file})
 
-    return jsonify({"message": "Crawling completed", "output_file": output_file})
+# @app.route('/analyze', methods=['POST'])
+# def analyze_url():
+#     """Analyze a specific URL dynamically"""
+#     global mcp_instance
+#     if not mcp_instance:
+#         return jsonify({"error": "MCP instance is not initialized"}), 400
 
-@app.route('/analyze', methods=['POST'])
-def analyze_url():
-    """Analyze a specific URL dynamically"""
-    global mcp_instance
-    if not mcp_instance:
-        return jsonify({"error": "MCP instance is not initialized"}), 400
+#     data = request.json
+#     url = data.get('url')
+#     if not url:
+#         return jsonify({"error": "URL is required"}), 400
 
-    data = request.json
-    url = data.get('url')
-    if not url:
-        return jsonify({"error": "URL is required"}), 400
+#     try:
+#         response = requests.get(url, timeout=10)
+#         mcp_instance.analyze_page(url, response.text)
+#         return jsonify({"message": f"URL {url} analyzed successfully"})
+#     except Exception as e:
+#         return jsonify({"error": str(e)}), 500
 
-    try:
-        response = requests.get(url, timeout=10)
-        mcp_instance.analyze_page(url, response.text)
-        return jsonify({"message": f"URL {url} analyzed successfully"})
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
+# @app.route('/results', methods=['GET'])
+# def get_results():
+#     """Retrieve the results of the analysis"""
+#     global mcp_instance
+#     if not mcp_instance:
+#         return jsonify({"error": "No analysis has been performed yet"}), 400
 
-@app.route('/results', methods=['GET'])
-def get_results():
-    """Retrieve the results of the analysis"""
-    global mcp_instance
-    if not mcp_instance:
-        return jsonify({"error": "No analysis has been performed yet"}), 400
+#     results = mcp_instance.get_results()
+#     return jsonify(results)
 
-    results = mcp_instance.get_results()
-    return jsonify(results)
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+# if __name__ == "__main__":
+#     app.run(host="0.0.0.0", port=5000)

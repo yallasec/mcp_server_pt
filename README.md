@@ -42,11 +42,13 @@ git clone https://github.com/yourusername/web-app-penetration-testing-mcp.git
 # Navigate to the directory
 cd web-app-penetration-testing-mcp
 
-# Install dependencies
+# Install dependencies - using uv
 pip install -r requirements.txt
 ```
 
-## Usage
+## Usage 
+
+at the moment other.py is the continued tool version
 
 ### Basic Operation
 
